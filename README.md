@@ -47,6 +47,7 @@ Swagger: http://localhost:8080/swagger/index.html
 ## Скрины отправки сообщения
 
 отправка через ws сообщения (через постмен), рассылается всем клиентам в чате
+
 0. Устанваливаем передачу данных между клиентом и SignalR хабом как json
 ```
 {"protocol":"json","version":1}
@@ -57,7 +58,7 @@ Swagger: http://localhost:8080/swagger/index.html
 {"arguments":[1],"invocationId":"0","target":"JoinChat","type":1}
 ```
 
-1. SendMessage "hello world" в чат с id 1
+2. SendMessage "hello world" в чат с id 1
 ```
 {"arguments":[1, "hello world"],"invocationId":"0","target":"SendMessage","type":1}
 ```
