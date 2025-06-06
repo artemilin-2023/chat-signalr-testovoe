@@ -1,0 +1,18 @@
+services:
+  chat.api:
+    image: ${DOCKER_REGISTRY-}chatapi
+    build:
+      context: .
+      dockerfile: Chat.API/Dockerfile
+    networks:
+    - chat-testovoe
+    ports:
+    - 7090:8080
+    - 7091:8081
+ 
+
+networks:
+  chat-testovoe:
+    name: chat-testovoe
+    driver: bridge
+    external: true
